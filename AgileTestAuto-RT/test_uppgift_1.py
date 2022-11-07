@@ -1,3 +1,2 @@
-import pytest
 def test_uppgift_1():
-    assert 1==1
+    assert 1 == 1
