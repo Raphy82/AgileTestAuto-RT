@@ -13,3 +13,9 @@ def test_fullname_invalid():
         emp2 = Employee("Jesse", "Pinkman", 55667788, 50000)
         assert emp2.fullname == "Sara Pinkman"
 
+def test_email():
+    emp1 = Employee("Walter", "White", 11223344, 40000)
+    emp2 = Employee("Jesse", "Pinkman", 55667788, 50000)
+    assert emp1.email == "Walter.White@iths.se"
+    assert emp2.email == "Jesse.Pinkman@iths.se"
+    print(emp1.email)

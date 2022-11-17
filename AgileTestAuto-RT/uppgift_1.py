@@ -11,3 +11,7 @@ class Employee:
     @property
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
+
+    @property
+    def email(self):
+        return '{}.{}@iths.se'.format(self.first, self.last)
