@@ -47,8 +47,15 @@ def test_telenr(emp1, emp2):
     print(emp1.telenr)
 
 
-'#Test pay/Salary works'
+'#Test Salary works'
 def test_salary(emp1, emp2):
     assert emp1.salary == "pay: 40000"
     assert emp2.salary == "pay: 50000"
     print(emp1.salary)
+
+
+'#Test Salary raise works'
+def test_salary_raise(emp1, emp2):
+    assert emp1.salary_raise == "new salary: 42000"
+    assert emp2.salary_raise == "new salary: 52500"
+    print(emp1.salary_raise)

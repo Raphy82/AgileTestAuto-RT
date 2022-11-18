@@ -6,11 +6,11 @@ class Employee:
         self.last = last
         self.tele = tele
         self.pay = pay
+        self.pay_raise = 1.05
 
     @property
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
-
 
     @property
     def email(self):
@@ -23,3 +23,7 @@ class Employee:
     @property
     def salary(self):
         return 'pay: {}'.format(self.pay)
+
+    @property
+    def salary_raise(self):
+        return 'new salary: {}'.format(int(self.pay * self.pay_raise))
