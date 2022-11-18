@@ -14,28 +14,41 @@ def emp2():
     return emp2
 
 
-#Test fullname works
+'#Test fullname works'
 def test_fullname(emp1, emp2):
     assert emp1.fullname == "Walter White"
     assert emp2.fullname == "Jesse Pinkman"
     print(emp1.fullname)
 
-#Test Changing name works
+    '#Test Changing name works'
     emp1.first = 'John'
     assert emp1.fullname == "John White"
     print(emp1.fullname)
 
 
-#Test wrong name is no match, test will fail
+'#Test wrong name is no match, test will fail'
 @pytest.mark.xfail()
 def test_fullname_invalid(emp2):
     with pytest.raises(ValueError):
         assert emp2.fullname == "Sara Pinkman"
 
 
-#Test email works
+'#Test email works'
 def test_email(emp1, emp2):
     assert emp1.email == "Walter.White@iths.se"
     assert emp2.email == "Jesse.Pinkman@iths.se"
     print(emp1.email)
 
+
+'#Test telephone nr works'
+def test_telenr(emp1, emp2):
+    assert emp1.telenr == "tele: 11223344"
+    assert emp2.telenr == "tele: 55667788"
+    print(emp1.telenr)
+
+
+'#Test pay/Salary works'
+def test_salary(emp1, emp2):
+    assert emp1.salary == "pay: 40000"
+    assert emp2.salary == "pay: 50000"
+    print(emp1.salary)

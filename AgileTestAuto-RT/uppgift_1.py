@@ -1,5 +1,4 @@
 
-
 class Employee:
 
     def __init__(self, first, last, tele, pay):
@@ -12,6 +11,15 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
+
     @property
     def email(self):
         return '{}.{}@iths.se'.format(self.first, self.last)
+
+    @property
+    def telenr(self):
+        return 'tele: {}'.format(self.tele)
+
+    @property
+    def salary(self):
+        return 'pay: {}'.format(self.pay)
