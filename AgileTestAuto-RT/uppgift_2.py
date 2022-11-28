@@ -1,3 +1,4 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -5,36 +6,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-class Netonnet:
-    def __init__(self):
+@pytest.mark.usefixtures("setup")
+class Netonnet():
+    def __init__(self, driver):
+        self.driver = driver
 
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-        '#Open Netonnet website in chrome'
-        driver.get("https://www.netonnet.se")
-        driver.fullscreen_window()
-        '#Accept cookies'
-        driver.find_element(By.XPATH, "//*[@id='cookiebannerShowSettingsButton']/div/div[1]/button").click()
+    '#Search for any product = skus'
+    def findproduct(self, skus):
+        sku = self.driver.find_element(By.XPATH, "//input[@placeholder='Sök produkter, guider och mer...']")
+        sku.send_keys(skus)
+        sku.send_keys(Keys.ENTER)
         time.sleep(2)
-        '#Search for product = 1004014'
-        elem = driver.find_element(By.XPATH, "//input[@placeholder='Sök produkter, guider och mer...']")
-        elem.send_keys("1004014")
-        elem.send_keys(Keys.ENTER)
-        artikel = driver.find_element(By.XPATH, "//div[@class='subTitle big']")
-        @property
-        def test_artikel(self):
-        self.artikel = driver.find_element(By.XPATH, "//div[@class='subTitle big']")
-        self.artikel = str(self.artikel)
-        print(self.artikel)
-        assert "210410" in self.artikel
-        time.sleep(2)
-        '#Add item 1004014 to checkout'
-        elem = driver.find_element(By.ID, "BuyButton_ProductPageStandard_1004014")
-        elem.send_keys(Keys.ENTER)
-        time.sleep(4)
 
-    iframe = driver.find_element(By.XPATH, "//div[@id='insuranceModal']//div[@class='modal-dialog modal-lg']")
-    driver.switch_to.frame(iframe)
-    driver.find_element(By.XPATH, "//div[@id='insuranceModal']//span[@class='closeModalIcon pull-right']").click()
+    '#Add item to basket'
+    def additem(self):
+        item = self.driver.find_element(By.XPATH, "//button[@id='BuyButton_ProductPageStandard_1004014']")
+        item.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        #iframe = self.driver.find_element(By.XPATH, "//div[@id='insuranceModal']//div[@class='modal-dialog modal-lg']")
+        #self.driver.switch_to.frame(iframe)
+        #self.driver.find_element(By.XPATH, "//div[@id='insuranceModal']//span[@class='closeModalIcon pull-right']").click()
 
 
 #cart_menu = driver.find_element(By.XPATH, "//div[@id='dialogAccordion']")
