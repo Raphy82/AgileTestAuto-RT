@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 #from uppgift_2 import Netonnet
 
 
-
 '# check first product added to basket'
 '# check right price is added to basket for first product'
 '# add second product added to basket'
@@ -13,6 +12,7 @@ from selenium.webdriver.common.by import By
 '# check discount calculated'
 '# check we go to checkout with all correct information'
 '# driver.implicitly_wait(10)'
+
 
 @pytest.mark.usefixtures("setup")
 class TestNetonnet:
@@ -24,5 +24,12 @@ class TestNetonnet:
         artikel = artikel.text
         print(artikel)
         assert "1004014" in artikel
+
+    def test_pris(self):
+        pris = self.driver.find_element(By.XPATH, "//div[@class='price-big']")
+        pris = pris.text
+        print(pris)
+        assert "349" in pris
+
 
 #assert stop.text == "1"
