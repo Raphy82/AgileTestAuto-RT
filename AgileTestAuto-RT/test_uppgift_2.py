@@ -1,17 +1,6 @@
 import pytest
-from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from uppgift_2 import Netonnet
-
-
-'# check first product added to basket'
-'# check right price is added to basket for first product'
-'# add second product added to basket'
-'# check right price is added to basket for first product'
-'# check total price in basket'
-'# check discount calculated'
-'# check we go to checkout with all correct information'
-'# driver.implicitly_wait(10)'
 
 
 @pytest.mark.usefixtures("setup")
@@ -49,4 +38,3 @@ class TestNetonnet:
         item = item.text
         print(item)
         assert item == "1"
-

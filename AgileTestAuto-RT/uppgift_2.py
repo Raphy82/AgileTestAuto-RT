@@ -1,13 +1,12 @@
 import pytest
-from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 import time
+
+
 @pytest.mark.usefixtures("setup")
-class Netonnet():
+class Netonnet:
     def __init__(self, driver):
         self.driver = driver
 
@@ -28,16 +27,17 @@ class Netonnet():
         #self.driver.switch_to.frame(iframe)
         #self.driver.find_element(By.XPATH, "//div[@id='insuranceModal']//span[@class='closeModalIcon pull-right']").click()
 
+        #driver.switch_to.frame("//div[@id='cartCollapse']")
+        #driver.find_element(By.XPATH, "//span[@class='closeModalIcon pull-right']").click()
 
-#cart_menu = driver.find_element(By.XPATH, "//div[@id='dialogAccordion']")
-#cart_menu = driver.find_element(By.XPATH, "//div[@id='cartModal']")
-#cart_menu = driver.find_element(By.XPATH, "//div[@id='cartCollapse']//div[@class='modal-header']")
-#x_button = driver.find_element(By.XPATH, "//span[@class='closeModalIcon pull-right']")
-#achains = ActionChains(driver)
-#achains.move_to_element(cart_menu).perform()
-#ActionChains(driver).move_to_element(cart_menu).click().perform()
-#driver.find_element(By.XPATH, "//div[@id='dialogAccordion']")
-#driver.switch_to.frame("//div[@id='cartCollapse']")
-#driver.find_element(By.XPATH, "//span[@class='closeModalIcon pull-right']").click()
-#time.sleep(2)
-#driver.close()
+        #cart_menu = driver.find_element(By.XPATH, "//div[@id='dialogAccordion']")
+        #cart_menu = driver.find_element(By.XPATH, "//div[@id='cartModal']")
+        #cart_menu = driver.find_element(By.XPATH, "//div[@id='cartCollapse']//div[@class='modal-header']")
+        #cart_menu = driver.find_element(By.XPATH, "//span[@class='closeModalIcon pull-right']")
+        #achains = ActionChains(driver)
+        #achains.move_to_element(cart_menu).perform()
+        #ActionChains(driver).move_to_element(cart_menu).click().perform()
+
+        #Alert(driver).dismiss()
+
+        #time.sleep(2)
