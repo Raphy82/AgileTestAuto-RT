@@ -1,4 +1,5 @@
 import pytest
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
@@ -21,6 +22,11 @@ class Netonnet:
         item = self.driver.find_element(By.XPATH, "//button[@id='BuyButton_ProductPageStandard_1004014']")
         item.send_keys(Keys.ENTER)
         time.sleep(2)
-
+        '# Close up-sell window'
         self.driver.find_element(By.XPATH, "//div[@id='add_to_cart_page.recs_1']//a[@class='btn btn-outline-primary btn-block-xs'][normalize-space()='Fortsätt handla']").click()
+        time.sleep(2)
+
+    def basket(self):
+        cart_menu = self.driver.find_element(By.XPATH, "//i[@class='svg tiny shopping-cart']")
+        ActionChains(self.driver).move_to_element(cart_menu).click().perform()
         time.sleep(2)

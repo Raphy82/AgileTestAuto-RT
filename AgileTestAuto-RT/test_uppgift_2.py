@@ -38,3 +38,19 @@ class TestNetonnet:
         item = item.text
         print(item)
         assert item == "1"
+
+    def test_additem2(self):
+        item1 = Netonnet(self.driver)
+        item1.additem()
+        item = self.driver.find_element(By.XPATH, "(//span[@class='cartItemCountValue'])[1]")
+        item = item.text
+        print(item)
+        assert item == "2"
+
+    def test_pris2(self):
+        priss = Netonnet(self.driver)
+        priss.basket()
+        pris2 = self.driver.find_element(By.XPATH, "//div[@class='totalPriceRow']")
+        pris2 = pris2.text
+        print(pris2)
+        assert "998" in pris2
