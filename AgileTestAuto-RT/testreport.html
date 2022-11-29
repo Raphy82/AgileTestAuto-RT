@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>testreport.html</h1>
-    <p>Report generated on 18-Nov-2022 at 23:34:37 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 29-Nov-2022 at 17:05:26 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -269,8 +269,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.11.0</td></tr></table>
     <h2>Summary</h2>
-    <p>6 tests ran in 0.09 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">1 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>7 tests ran in 16.60 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">7 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -281,63 +281,74 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="xfailed results-table-row">
-        <tr>
-          <td class="col-result">XFailed</td>
-          <td class="col-name">test_uppgift_1.py::test_fullname_invalid</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">emp2 = &lt;uppgift_1.Employee object at 0x1023bac50&gt;<br/><br/>    @pytest.mark.xfail()<br/>    def test_fullname_invalid(emp2):<br/>        with pytest.raises(ValueError):<br/>&gt;           assert emp2.fullname == &quot;Sara Pinkman&quot;<br/><span class="error">E           AssertionError: assert &#x27;Jesse Pinkman&#x27; == &#x27;Sara Pinkman&#x27;</span><br/><span class="error">E             - Sara Pinkman</span><br/><span class="error">E             + Jesse Pinkman</span><br/><br/>test_uppgift_1.py:33: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_uppgift_1.py::test_fullname</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_artikel</td>
+          <td class="col-duration">5.67</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Walter White
-John White
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Andersson Powerbank 20.000 PD/QC 3.0   Art.nr: 1004014
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_uppgift_1.py::test_email</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_namn</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Walter.White@iths.se
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Testvinnande powerbank med många laddmöjligheter
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_uppgift_1.py::test_telenr</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_pris</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>tele: 11223344
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>499:-
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_uppgift_1.py::test_salary</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_lager</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>pay: 40000
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>I lager
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_uppgift_1.py::test_salary_raise</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_additem</td>
+          <td class="col-duration">4.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>new salary: 42000
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>1
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_additem2</td>
+          <td class="col-duration">4.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>2
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_uppgift_2.py::TestNetonnet::test_pris2</td>
+          <td class="col-duration">2.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Totalpris:
+998:-
 <br/></div></td></tr></tbody></table></body></html>
