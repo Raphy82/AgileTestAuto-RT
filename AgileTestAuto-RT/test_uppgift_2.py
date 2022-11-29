@@ -23,7 +23,7 @@ class TestNetonnet:
         pris = self.driver.find_element(By.XPATH, "//div[@class='price-big']")
         pris = pris.text
         print(pris)
-        assert "349" in pris
+        assert "499" in pris
 
     def test_lager(self):
         lager = self.driver.find_element(By.XPATH, "//span[normalize-space()='I lager']")
